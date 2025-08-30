@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Maker</title>
+    <style>
+      body {
+        background: linear-gradient(to bottom, #f7e7ce, #f1d1a5);
+        font-family: Tahoma, Arial, sans-serif;
+        padding: 20px;
+        margin: 0;
+      }
+
+      .container {
+        max-width: 700px;
+        margin: auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .main-header {
+        text-align: center;
+        padding: 15px;
+        background-color: #ffd8a8;
+        color: #5d4037;
+        border-radius: 12px;
+        margin-bottom: 25px;
+      }
+
+      .main-text {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #6d4c41;
+      }
+
+      .main-btn {
+        padding: 12px 20px;
+        border-radius: 10px;
+        background-color: #ffb74d;
+        border: none;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 0.2s;
+        margin-top: 15px;
+        display: block;
+      }
+
+      .main-btn:hover {
+        background-color: #ffa726;
+      }
+
+      .user-inputs {
+        background-color: #ffe0b2;
+        padding: 20px;
+        border-radius: 12px;
+        margin-top: 20px;
+      }
+
+      .user-input {
+        margin-bottom: 15px;
+      }
+
+      label {
+        font-weight: bold;
+        color: #5d4037;
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input {
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        width: 95%;
+        font-size: 14px;
+      }
+
+      #timer {
+        font-size: 40px;
+        background-color: #212121;
+        color: #76ff03;
+        padding: 20px;
+        width: 200px;
+        margin: 25px auto;
+        text-align: center;
+        border-radius: 8px;
+
+        box-shadow: 0 0 10px rgba(118, 255, 3, 0.7);
+      }
+
+      #output {
+        margin-top: 20px;
+        font-size: 20px;
+        color: #2e7d32;
+        text-align: center;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="main-header">🎉 Event Maker 🎉</h2>
+      <div class="event-maker">
+        <h3 class="main-text">ابدأ بإنشاء الايفنت الخاص بك 👇:</h3>
+        <button class="main-btn" onclick="eventMaker()">إضافة ايفينت</button>
+      </div>
+
+      <div class="user-inputs">
+        <div class="user-input">
+          <label for="event-name">اكتب اسم الايفينت:</label>
+          <input
+            type="text"
+            id="event-name"
+            placeholder="اكتب اسم الايفينت هنا..."
+          />
+        </div>
+        <div class="user-input">
+          <label for="event-time">اكتب المدة (بالثواني):</label>
+          <input type="text" id="event-time" placeholder="المدة بالثواني" />
+        </div>
+      </div>
+
+      <div id="timer">00:00</div>
+      <div id="output"></div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
